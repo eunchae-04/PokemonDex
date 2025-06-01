@@ -1,9 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { usePokemon } from "../context/PokemonContext";
 
-export default function PokemonCard({ pokemon }) {
-  const { myPokemons, addPokemon, removePokemon } = usePokemon();
+export default function PokemonCard({ pokemon, myPokemons, addPokemon, removePokemon }) {
   const isAdded = myPokemons.includes(pokemon.id);
   const navigate = useNavigate();
 

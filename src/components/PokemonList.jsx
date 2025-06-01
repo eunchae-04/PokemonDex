@@ -1,9 +1,8 @@
-// src/components/PokemonList.jsx
 import React from "react";
 import pokemons from "../data/pokemons";
 import PokemonCard from "./PokemonCard";
 
-export default function PokemonList() {
+export default function PokemonList({ myPokemons, addPokemon, removePokemon }) {
   return (
     <div
       style={{
@@ -14,7 +13,13 @@ export default function PokemonList() {
       }}
     >
       {pokemons.map((pokemon) => (
-        <PokemonCard key={pokemon.id} pokemon={pokemon} />
+        <PokemonCard
+          key={pokemon.id}
+          pokemon={pokemon}
+          myPokemons={myPokemons}
+          addPokemon={addPokemon}
+          removePokemon={removePokemon}
+        />
       ))}
     </div>
   );

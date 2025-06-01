@@ -1,16 +1,16 @@
-// src/components/MyPokemon.jsx
 import React from "react";
-import { usePokemon } from "../context/PokemonContext";
 import pokemons from "../data/pokemons";
 
-export default function MyPokemon() {
-  const { myPokemons, removePokemon } = usePokemon();
-
+export default function MyPokemon({ myPokemons, removePokemon }) {
   return (
-    <div style={{ display: "grid",
+    <div
+      style={{
+        display: "grid",
         gridTemplateColumns: "repeat(6, 1fr)",
         gap: "12px",
-        marginTop: "20px", }}>
+        marginTop: "20px",
+      }}
+    >
       {[...Array(6)].map((_, i) => {
         const pokemonId = myPokemons[i];
         const pokemon = pokemons.find((p) => p.id === pokemonId);
