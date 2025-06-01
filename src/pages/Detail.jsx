@@ -1,12 +1,13 @@
+//src/pages/Detail.jsx
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import pokemons from "../data/pokemons";
-import { usePokemon } from "../context/PokemonContext"; // Context import 추가
+import { usePokemon } from "../context/PokemonContext"; 
 
 export default function Detail() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { myPokemons, addPokemon, removePokemon } = usePokemon(); // Context에서 상태, 함수 받기
+  const { myPokemons, addPokemon, removePokemon } = usePokemon(); 
   const pokemon = pokemons.find((p) => p.id === Number(id));
 
   if (!pokemon) {

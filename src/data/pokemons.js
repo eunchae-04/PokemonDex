@@ -1,3 +1,4 @@
+//src/data/pokemons.js
 const pokemons = [
   {
     id: 1,
