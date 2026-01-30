@@ -9,8 +9,8 @@ export function PokemonProvider({ children }) {
 
   const addPokemon = (id) => {
     if (myPokemons.includes(id)) return;
-    if (myPokemons.length >= 6) {
-      toast.error("최대 6마리까지 등록할 수 있습니다!");
+    if (myPokemons.length >= 5) {
+      toast.error("최대 5마리까지 등록할 수 있습니다!");
       return;
     }
     setMyPokemons([...myPokemons, id]);

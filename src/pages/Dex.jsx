@@ -45,7 +45,7 @@ export default function Dex() {
       <Section>
         <SectionHeader>
           <SectionTitle>나만의 포켓몬</SectionTitle>
-          <SectionHint>최대 6마리까지 등록할 수 있어요</SectionHint>
+          <SectionHint>최대 5마리까지 등록할 수 있어요</SectionHint>
         </SectionHeader>
         <MyPokemon />
       </Section>

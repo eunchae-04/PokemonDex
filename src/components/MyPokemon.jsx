@@ -10,7 +10,7 @@ export default function MyPokemon() {
       gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",
       gap: "16px",
       marginTop: "12px", }}>
-      {[...Array(6)].map((_, i) => {
+      {[...Array(5)].map((_, i) => {
         const pokemonId = myPokemons[i];
         const pokemon = pokemons.find((p) => p.id === pokemonId);
 

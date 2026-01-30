@@ -7,7 +7,7 @@ export default function Dashboard() {
 
   return (
     <div style={{ display: "flex", gap: "10px" }}>
-      {[...Array(6)].map((_, i) => {
+      {[...Array(5)].map((_, i) => {
         const pokemonId = myPokemons[i];
         const pokemon = pokemons.find((p) => p.id === pokemonId);
         return (
