@@ -39,6 +39,14 @@ export default function PokemonList() {
             if (koreanEntry) {
               description = koreanEntry.flavor_text.replace(/[\n\f]/g, " ");
             }
+
+            // 한국어 이름 찾기
+            const koreanName = speciesData.names?.find(
+              (name) => name.language.name === "ko"
+            );
+            if (koreanName?.name) {
+              pokemonData.name = koreanName.name;
+            }
           } catch (error) {
             console.error("포켓몬 설명 로드 실패:", error);
           }

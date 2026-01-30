@@ -57,7 +57,7 @@ const Subtitle = styled.p`
 `;
 
 const StartButton = styled.button`
-  background: linear-gradient(135deg, #ef4444, #f97316);
+  background: linear-gradient(135deg, #ef4444, #f96916);
   color: white;
   font-size: 18px;
   font-weight: 700;
@@ -86,7 +86,6 @@ const Home = () => {
       <Overlay />
       <HeroCard>
         <Logo src={logo} alt="Pokemon Logo" />
-        <Title>세상에서 가장 멋진 포켓몬 도감</Title>
         <Subtitle>포켓몬을 모으고, 상세 정보를 확인하며 나만의 팀을 완성해보세요.</Subtitle>
         <StartButton onClick={handleStart}>포켓몬 도감 시작하기</StartButton>
       </HeroCard>

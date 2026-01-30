@@ -76,7 +76,8 @@ const CloseButton = styled.button`
 const ModalImage = styled.img`
   width: 300px;
   height: 300px;
-  margin-bottom: 20px;
+  display: block;
+  margin: 0 auto 20px;
   filter: drop-shadow(0 12px 30px rgba(15, 23, 42, 0.2));
 `;
 
@@ -126,7 +127,7 @@ export default function PokemonCard({ pokemon }) {
         <img
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
           alt={pokemon.name}
-          style={{ width: 150, height: 170 }}
+          style={{ width: 150, height: 170, margin: "0 auto" }}
         />
         <div style={{ marginTop: 8 }}>
           <strong style={{ fontSize: "15px" }}>{pokemon.name}</strong>

@@ -33,7 +33,7 @@ export default function MyPokemon() {
                 <img
                   src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
                   alt={pokemon.name}
-                  style={{ width: 150, height: 170 }}
+                  style={{ width: 150, height: 170, margin: "0 auto" }}
                 />
                 <div style={{ marginTop: 8 }}>
                   <strong>{pokemon.name}</strong>
