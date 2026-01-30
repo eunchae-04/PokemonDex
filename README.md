@@ -1,12 +1,14 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# PokemonDex
 
-Currently, two official plugins are available:
+포켓몬 API를 활용해 무한 스크롤로 포켓몬을 탐색하고, 상세 정보 모달과 나만의 포켓몬 팀을 관리할 수 있는 웹 도감입니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 주요 기능
+- 무한 스크롤: 최초 48마리 로드 후 스크롤 시 24마리씩 추가 로드
+- 상세 모달: 카드 클릭 시 확대된 상세 정보와 설명 표시
+- 한국어 데이터: 포켓몬 이름과 설명을 한국어로 표시
+- 나만의 포켓몬: 최대 5마리까지 추가/삭제 가능
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 실행 방법
+- 개발 서버 실행: `npm run dev`
+- 빌드: `npm run build`
