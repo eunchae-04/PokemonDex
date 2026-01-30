@@ -114,9 +114,9 @@ export default function PokemonList() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(6, 1fr)",
-          gap: "12px",
-          marginTop: "20px",
+          gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",
+          gap: "16px",
+          marginTop: "8px",
         }}
       >
         {displayedPokemons.map((pokemon) => (

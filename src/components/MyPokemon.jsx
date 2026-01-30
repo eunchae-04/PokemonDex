@@ -7,9 +7,9 @@ export default function MyPokemon() {
 
   return (
     <div style={{ display: "grid",
-        gridTemplateColumns: "repeat(6, 1fr)",
-        gap: "12px",
-        marginTop: "20px", }}>
+      gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",
+      gap: "16px",
+      marginTop: "12px", }}>
       {[...Array(6)].map((_, i) => {
         const pokemonId = myPokemons[i];
         const pokemon = pokemons.find((p) => p.id === pokemonId);
@@ -18,14 +18,14 @@ export default function MyPokemon() {
           <div
             key={i}
             style={{
-              width: 200,
+              width: "100%",
               height: 280,
-              border: "1px solid #ccc",
+              border: "1px solid rgba(148, 163, 184, 0.35)",
               borderRadius: "12px",
               textAlign: "center",
               padding: "10px",
-              backgroundColor: "#fff",
-              boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+              background: "linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)",
+              boxShadow: "0 10px 24px rgba(15, 23, 42, 0.08)",
             }}
           >
             {pokemon ? (
@@ -64,8 +64,10 @@ export default function MyPokemon() {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  color: "#999",
+                  color: "#94a3b8",
                   fontSize: "14px",
+                  border: "2px dashed rgba(148, 163, 184, 0.5)",
+                  borderRadius: "10px",
                 }}
               >
                 빈 슬롯

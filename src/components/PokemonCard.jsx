@@ -3,20 +3,20 @@ import { usePokemon } from "../context/PokemonContext";
 import styled from "styled-components";
 
 const CardContainer = styled.div`
-  width: 200px;
+  width: 100%;
   height: 280px;
-  border: 1px solid #ccc;
+  border: 1px solid rgba(148, 163, 184, 0.35);
   border-radius: 12px;
   text-align: center;
   padding: 10px;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 30px rgba(15, 23, 42, 0.15);
   }
 `;
 
@@ -27,6 +27,7 @@ const ModalOverlay = styled.div`
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,6 +35,7 @@ const ModalOverlay = styled.div`
 `;
 
 const ModalContent = styled.div`
+  position: relative;
   background-color: white;
   border-radius: 16px;
   padding: 40px;
@@ -75,6 +77,7 @@ const ModalImage = styled.img`
   width: 300px;
   height: 300px;
   margin-bottom: 20px;
+  filter: drop-shadow(0 12px 30px rgba(15, 23, 42, 0.2));
 `;
 
 const ActionButton = styled.button`

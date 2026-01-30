@@ -6,41 +6,71 @@ import logo from "../assets/pokemon-logo.webp";
 import bgImage from "../assets/background.jpeg";
 
 const Container = styled.div`
+  position: relative;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  width: 100vw;
-  height: 100vh;
+  padding: 40px 20px;
 
   background-image: url(${bgImage});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+`;
 
-  backdrop-filter: blur(2px);
+const Overlay = styled.div`
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.2));
+  backdrop-filter: blur(4px);
+`;
+
+const HeroCard = styled.div`
+  position: relative;
+  z-index: 1;
+  width: min(720px, 92vw);
+  padding: 48px 40px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  text-align: center;
 `;
 
 const Logo = styled.img`
-  width: 360px;
-  margin-bottom: 30px;
+  width: min(360px, 80vw);
+  margin: 0 auto 20px;
+  filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.2));
+`;
+
+const Title = styled.h1`
+  font-size: clamp(26px, 4vw, 34px);
+  margin: 0 0 10px;
+  color: #0f172a;
+`;
+
+const Subtitle = styled.p`
+  margin: 0 0 28px;
+  color: #475569;
+  font-size: 16px;
 `;
 
 const StartButton = styled.button`
-  background-color: #e53935;
+  background: linear-gradient(135deg, #ef4444, #f97316);
   color: white;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 14px 32px;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 14px 34px;
   border: none;
-  border-radius: 12px;
+  border-radius: 14px;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
+  box-shadow: 0 10px 24px rgba(239, 68, 68, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
-    background-color: #d32f2f;
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(239, 68, 68, 0.4);
   }
 `;
 
@@ -53,8 +83,13 @@ const Home = () => {
 
   return (
     <Container>
-      <Logo src={logo} alt="Pokemon Logo" />
-      <StartButton onClick={handleStart}>포켓몬 도감 시작하기</StartButton>
+      <Overlay />
+      <HeroCard>
+        <Logo src={logo} alt="Pokemon Logo" />
+        <Title>세상에서 가장 멋진 포켓몬 도감</Title>
+        <Subtitle>포켓몬을 모으고, 상세 정보를 확인하며 나만의 팀을 완성해보세요.</Subtitle>
+        <StartButton onClick={handleStart}>포켓몬 도감 시작하기</StartButton>
+      </HeroCard>
     </Container>
   );
 };
