@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../assets/pokemon-logo.webp";
-import bgImage from "../assets/background.jpeg";
+import bgImage from "../assets/image.png";
 
 const Container = styled.div`
   position: relative;
@@ -22,7 +22,7 @@ const Container = styled.div`
 const Overlay = styled.div`
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.2));
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.23), rgba(15, 23, 42, 0.07));
   backdrop-filter: blur(4px);
 `;
 
@@ -42,12 +42,6 @@ const Logo = styled.img`
   width: min(360px, 80vw);
   margin: 0 auto 20px;
   filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.2));
-`;
-
-const Title = styled.h1`
-  font-size: clamp(26px, 4vw, 34px);
-  margin: 0 0 10px;
-  color: #0f172a;
 `;
 
 const Subtitle = styled.p`

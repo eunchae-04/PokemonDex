@@ -26,9 +26,7 @@ html, body, #root {
 body {
   min-width: 320px;
   min-height: 100vh;
-  background: radial-gradient(1200px 600px at 20% 0%, #eef2ff 0%, rgba(238, 242, 255, 0) 60%),
-    radial-gradient(1200px 600px at 80% 0%, #fef3c7 0%, rgba(254, 243, 199, 0) 60%),
-    #f8fafc;
+  background-color: #f8fafc;
 }
 
 a {
