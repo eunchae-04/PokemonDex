@@ -5,6 +5,7 @@ const PokemonContext = createContext();
 
 export function PokemonProvider({ children }) {
   const [myPokemons, setMyPokemons] = useState([]);
+  const [pokemons, setPokemons] = useState([]);
 
   const addPokemon = (id) => {
     if (myPokemons.includes(id)) return;
@@ -22,7 +23,7 @@ export function PokemonProvider({ children }) {
   };
 
   return (
-    <PokemonContext.Provider value={{ myPokemons, addPokemon, removePokemon }}>
+    <PokemonContext.Provider value={{ myPokemons, addPokemon, removePokemon, pokemons, setPokemons }}>
       {children}
     </PokemonContext.Provider>
   );

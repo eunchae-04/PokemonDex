@@ -1,10 +1,9 @@
 //src/components/Dashboard.jsx
 import React from "react";
 import { usePokemon } from "../context/PokemonContext";
-import pokemons from "../data/pokemons";
 
 export default function Dashboard() {
-  const { myPokemons } = usePokemon();
+  const { myPokemons, pokemons } = usePokemon();
 
   return (
     <div style={{ display: "flex", gap: "10px" }}>

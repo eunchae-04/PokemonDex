@@ -1,10 +1,9 @@
 // src/components/MyPokemon.jsx
 import React from "react";
 import { usePokemon } from "../context/PokemonContext";
-import pokemons from "../data/pokemons";
 
 export default function MyPokemon() {
-  const { myPokemons, removePokemon } = usePokemon();
+  const { myPokemons, removePokemon, pokemons } = usePokemon();
 
   return (
     <div style={{ display: "grid",
